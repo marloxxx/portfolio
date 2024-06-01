@@ -1,5 +1,6 @@
-import GCI from '@/companies/gci.webp'
 import DEL from '@/companies/del.webp'
+import GCI from '@/companies/gci.webp'
+
 export type TCompany = {
   name: string
   logo: any

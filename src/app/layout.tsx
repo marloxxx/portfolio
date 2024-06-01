@@ -4,7 +4,7 @@ import { headers } from 'next/headers'
 import { ReactNode } from 'react'
 
 import './globals.css'
-import OG_IMAGE from '@/assets/og-image.png'
+import OG_IMAGE from '@/assets/og-image.jpg'
 import { METADATA } from '@/constants/meta'
 import { APP_URL } from '@/constants/others'
 import { colors } from '@/lib/theme'

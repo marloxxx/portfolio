@@ -20,7 +20,7 @@ const Home = () => {
       <AnimatedBorderCard wrapperClassName="aspect-square w-1/2 min-w-[280px] max-w-[325px]">
         <Image
           priority
-          alt="Horas Siregar"
+          alt="Horas Marolop Amsal Siregar"
           className="object-cover"
           height={450}
           src={PROFILE_IMG}
@@ -38,7 +38,7 @@ const Home = () => {
           className="animate-text bg-gradient-to-tr from-primary to-secondary bg-clip-text text-4xl font-bold tracking-wider text-transparent drop-shadow-lg md:text-6xl 2xl:text-7xl"
           variants={fadeIn('up', 'tween', 25, 0.1, 0.5)}
         >
-          Horas Siregar
+          Horas Marolop Amsal Siregar
         </motion.h1>
         <motion.h5
           className="font-semibold tracking-wide lg:text-xl 2xl:text-2xl"

@@ -36,75 +36,65 @@ export const MINOR_PROJECT_HEADER = {
 
 export const MAJOR_PROJECTS: TProject[] = [
   {
-    id: 'ckret',
-    title: 'Ckret',
+    id: 'rajastorevpn',
+    title: 'RajastoreVPN',
     image: CKRET,
     color: '#FF8A00',
     summary:
-      'Ckret is an anonymous messaging platform. Exchange anonymous questions, feedback, suggestions, dares, and challenges with your friends, families, and coworkers.',
+      'RajastoreVPN provides quality VPN services at affordable prices. We use Pay-As-You-Go payment model and authentication via Telegram for user security. Our team is committed to data security and a responsive user experience. Use our service for a secure and private internet connection with transparent cost control.',
     links: [
       {
-        iconId: 'github',
-        destination: 'https://github.com/s4shibam/ckret'
-      },
-      {
         iconId: 'live',
-        destination: 'https://ckret.xyz'
+        destination: 'https://panel.rajastorevpn.com/'
       }
     ],
     features: [
-      'Exchange messages with friends and families anonymously.',
-      'Create account anonymously or with gmail to get messages.',
-      'Send secret messages using ckret link without even creating account.',
-      'Share ckret link to social media platforms in one click to receive messages.',
-      'Highly customizable settings for the best user experience.',
-      'Install the Ckret App (PWA) for convenience.'
+      'User authentication via Telegram',
+      'Secure and private internet connection',
+      'Transparent cost control',
+      'Pay-As-You-Go payment model',
+      'Responsive user experience',
     ],
     techs: [
-      'next',
-      'typescript',
-      'tailwindcss',
-      'shadcn/ui',
-      'next-auth',
-      'react-query',
-      'react-hot-toast',
-      'html2canvas'
+      'Laravel',
+      'Bootstrap',
+      'JQuery',
+      'PHP',
+      'MySQL',
+      'Telegram Bot API',
+      'REST API',
+      'Cloudflare',
+      'Tripay'
     ]
   },
   {
-    id: 'quizzy',
-    title: 'Quizzy',
+    id: 'vpnstunnel',
+    title: 'VPNStunnel',
     image: QUIZZY,
     color: '#18A08B',
     summary:
-      'Quizzy is a platform for online computer science or coding quizzes, as well as learning new topics by watching video content on the platform.',
+      'VPNStunnel offers a wide variety of VPNs with multiple protocols available for free. It caters to users who need secure and private internet access without the expense typically associated with premium VPN services. The VPN options provided ensure that users can bypass geo-restrictions, enhance their online privacy, and protect their data from potential cyber threats. Each VPN service on the site supports different protocols such as SSH, XRAY VPN,  OpenVPN, WireGuard, and more, giving users the flexibility to choose the one that best suits their needs. OpenVPN, for instance, is known for its robust security and versatility, while WireGuard is praised for its speed and modern cryptographic techniques. The site aims to make VPN access easy and accessible, offering user-friendly instructions for setup and configuration. This makes it an excellent resource for individuals who might not be tech-savvy but still want to take advantage of the benefits that a VPN offers. By providing these services for free, the website stands out as a valuable tool for enhancing internet freedom and security for a broad audience.',
     links: [
       {
-        iconId: 'github',
-        destination: 'https://github.com/s4shibam/quizzy'
-      },
-      {
         iconId: 'live',
-        destination: 'https://quizzy.shibamsaha.dev'
+        destination: 'https://vpnstunnel.com/'
       }
     ],
     features: [
-      'User experience-centric, modern and responsive interface',
-      'Dark and Light theme support',
-      'User authentication by Firebase: Google Signin, Email/Password Signin',
-      'Option to edit profile and reset password',
-      'Marking based quizzes',
-      'Certificate on successful completion',
-      'Quiz submission history',
-      'Video tutorials to learn computer science topics'
+      'Secure and private internet access',
+      'Responsive user experience',
+      'Content management system',
     ],
     techs: [
-      'react',
-      'tailwindcss',
-      'firebase',
-      'lodash',
-      'react-router-dom',
-      'react-hot-toast'
+      'Laravel',
+      'Bootstrap',
+      'JQuery',
+      'PHP',
+      'MySQL',
+      'SSH',
+      'OpenVPN',
+      'WireGuard',
+      'XRay',
     ]
   },
   {

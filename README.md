@@ -1,18 +1,13 @@
 <p align="center">
-    <a href="https://s4shibam.com">
+    <a href="https://horas-code.my.id">
         <img alt="Portfolio" width="100" src="./src/app/icon.ico">
     </a>
 </p>
 
 <div align="center">
-    <h1>Shibam Saha</h1>
+    <h1>Horas Marolop Amsal Siregar</h1>
     <p>Portfolio</p>
 </div>
-
-<p align="center">
-    <img src="https://img.shields.io/github/languages/code-size/s4shibam/portfolio?style=flat-square" alt="Code Size">
-    <img src="https://img.shields.io/github/stars/s4shibam/portfolio?style=flat-square&logo=github" alt="Stars">
-</p>
 
 <br />
 
