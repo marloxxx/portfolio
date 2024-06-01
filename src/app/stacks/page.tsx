@@ -41,8 +41,9 @@ const Stacks = () => {
                   <tech.Icon
                     className="size-4 sm:size-5"
                     color={tech.color}
-                    onPointerEnterCapture={undefined}
-                    onPointerLeaveCapture={undefined}
+                    onPointerOverCapture={undefined}
+                    onPointerMoveCapture={undefined}
+
                   />
                 </div>
                 <p className="text-sm font-medium tracking-wide md:text-lg">
