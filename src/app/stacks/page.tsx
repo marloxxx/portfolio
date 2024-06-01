@@ -41,8 +41,8 @@ const Stacks = () => {
                   <tech.Icon
                     className="size-4 sm:size-5"
                     color={tech.color}
-                    onPointerOverCapture={undefined}
                     onPointerMoveCapture={undefined}
+                    onPointerOverCapture={undefined}
 
                   />
                 </div>
