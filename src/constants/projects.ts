@@ -1,13 +1,11 @@
 import { BOXICONS } from '@/lib/box-icons'
-import CALCULATOR from '@/projects/calculator.webp'
-import CERTIVITA from '@/projects/certivita.webp'
-import CKRET from '@/projects/ckret.webp'
-import DIGITAL_CLOCK from '@/projects/digital-clock.webp'
-import FILMINGG from '@/projects/filmingg.webp'
-import QUIZZY from '@/projects/quizzy.webp'
-import REGISTRATION_FORM_UI from '@/projects/registration-form-ui.webp'
-import SCRENOO from '@/projects/screnoo.webp'
-import SUDOKU_WIZARD from '@/projects/sudoku-wizard.webp'
+import ASTINA from '@/projects/astina.webp'
+import RAJASTOREVPN from '@/projects/rajastorevpn.webp'
+import SIBOTOBANGUN from '@/projects/sibotobangun.webp'
+import SID3TI from '@/projects/sid3ti.webp'
+import SIRAM from '@/projects/siram.webp'
+import VPNSTUNNEL from '@/projects/vpnstunnel.webp'
+
 
 export type TProject = {
   id: string
@@ -38,8 +36,8 @@ export const MAJOR_PROJECTS: TProject[] = [
   {
     id: 'rajastorevpn',
     title: 'RajastoreVPN',
-    image: CKRET,
-    color: '#FF8A00',
+    image: RAJASTOREVPN,
+    color: '#F2F2F2',
     summary:
       'RajastoreVPN provides quality VPN services at affordable prices. We use Pay-As-You-Go payment model and authentication via Telegram for user security. Our team is committed to data security and a responsive user experience. Use our service for a secure and private internet connection with transparent cost control.',
     links: [
@@ -54,23 +52,14 @@ export const MAJOR_PROJECTS: TProject[] = [
       'Transparent cost control',
       'Pay-As-You-Go payment model',
       'Responsive user experience',
+      'Broadcast notifications',
     ],
-    techs: [
-      'Laravel',
-      'Bootstrap',
-      'JQuery',
-      'PHP',
-      'MySQL',
-      'Telegram Bot API',
-      'REST API',
-      'Cloudflare',
-      'Tripay'
-    ]
+    techs: ['html', 'bootstrap', 'jquery', 'laravel', 'mysql', 'telegram', 'smtp', 'tripay']
   },
   {
     id: 'vpnstunnel',
     title: 'VPNStunnel',
-    image: QUIZZY,
+    image: VPNSTUNNEL,
     color: '#18A08B',
     summary:
       'VPNStunnel offers a wide variety of VPNs with multiple protocols available for free. It caters to users who need secure and private internet access without the expense typically associated with premium VPN services. The VPN options provided ensure that users can bypass geo-restrictions, enhance their online privacy, and protect their data from potential cyber threats. Each VPN service on the site supports different protocols such as SSH, XRAY VPN,  OpenVPN, WireGuard, and more, giving users the flexibility to choose the one that best suits their needs. OpenVPN, for instance, is known for its robust security and versatility, while WireGuard is praised for its speed and modern cryptographic techniques. The site aims to make VPN access easy and accessible, offering user-friendly instructions for setup and configuration. This makes it an excellent resource for individuals who might not be tech-savvy but still want to take advantage of the benefits that a VPN offers. By providing these services for free, the website stands out as a valuable tool for enhancing internet freedom and security for a broad audience.',
@@ -85,109 +74,89 @@ export const MAJOR_PROJECTS: TProject[] = [
       'Responsive user experience',
       'Content management system',
     ],
-    techs: [
-      'Laravel',
-      'Bootstrap',
-      'JQuery',
-      'PHP',
-      'MySQL',
-      'SSH',
-      'OpenVPN',
-      'WireGuard',
-      'XRay',
-    ]
+    techs: ['laravel', 'bootstrap', 'jquery', 'php', 'mysql', 'ssh', 'openvpn', 'wireguard', 'xray']
   },
   {
-    id: 'sudoku_wizard',
-    title: 'Sudoku Wizard',
-    image: SUDOKU_WIZARD,
-    color: '#7373E2',
+    id: 'astina_attendance_app',
+    title: 'Astina Attendance App',
+    image: ASTINA,
+    color: '#FA4000',
     summary:
-      'Sudoku Wizard is an algorithmic project based on Backtracking Algorithm. This project illustrates the operation of the backtracking algorithm, which is used to solve any sudoku puzzle.',
+      "Introducing Astina Attendance App: Your modern solution for effortless attendance tracking. Harnessing facial recognition technology, Astina ensures seamless clock-ins and tamper-proof records. With real-time sync, detailed reporting, and user-friendly design, it's the ultimate tool for boosting productivity in any work environment.",
     links: [
       {
-        iconId: 'github',
-        destination: 'https://github.com/s4shibam/sudoku-wizard'
-      },
-      {
         iconId: 'live',
-        destination: 'https://sudoku-wizard.shibamsaha.dev'
+        destination: 'https://drive.google.com/file/d/1eG61g4BGupubKi-IVvPZwZOE2Jvy9fnz/view?usp=drive_link'
       }
     ],
     features: [
-      'Generate sudoku problem',
-      'Solve existing sudoku problem',
-      'Visualize how the backtracking algorithm works in behind'
+      'Real-time data synchronization',
+      'Detailed reporting',
+      'User-friendly interfaces',
+      'Facial recognition technology',
+      'Hybrid and remote work environments',
     ],
-    techs: ['html', 'tailwindcss', 'javascript']
+    techs: ['flutter', 'bloc', 'clean-architecture', 'face-recognition', 'face-detection', 'flask', 'opencv', 'rest-api', 'geocordinates']
   },
   {
-    id: 'certivita',
-    title: 'Certivita',
-    image: CERTIVITA,
+    id: 'siram',
+    title: 'Siram - Mobile POS for UPT SPAM',
+    image: SIRAM,
     color: '#0099FF',
     summary:
-      'Certivita is an online tool that helps to generate fully customizable personalized certificates.',
+      'Introducing Siram - the Mobile POS for UPT SPAM! This innovative app revolutionizes water usage tracking and payment management in Humabang Hasundutan district. Built on Flutter technology, Siram seamlessly integrates with thermal printers for lightning-fast invoice printing. Say goodbye to cumbersome paperwork and hello to streamlined efficiency with Siram!.',
     links: [
       {
-        iconId: 'github',
-        destination: 'https://github.com/s4shibam/certivita'
-      },
-      {
-        iconId: 'live',
-        destination: 'https://certivita.shibamsaha.dev'
+        iconId: 'youtube',
+        destination: 'https://youtu.be/nGLdawck-SA'
       }
     ],
     features: [
-      'Generate customizable certificates',
-      'List of customizable fields: Certificate Genre, Recipient Name, Certificate Reason, Date of Issue, Signature',
-      'Download certificate in .pdf format'
+      'Real-time data synchronization',
+      'Detailed reporting',
+      'User-friendly interfaces',
+      'Thermal printers integration',
+      'Location tracking and payment management',
     ],
-    techs: ['html', 'tailwindcss', 'javascript', 'pdf-lib', 'sweetalert']
+    techs: ['flutter', 'bloc', 'clean-architecture', 'thermal-printer', 'google-maps', 'geocordinates', 'rest - api']
   }
 ]
 
 export const MINOR_PROJECTS: TProject[] = [
   {
-    id: 'screnoo',
-    title: 'Screnoo',
-    image: SCRENOO,
-    color: '#5EEAD4',
+    id: 'delmart',
+    title: 'Delmart',
+    image: '',
+    color: '#FF8F00',
     summary:
-      'Screnoo is a PC Screen recorder which helps to record desktop or laptop screen along with system or user audio.',
+      'Delmart is a Flutter-based mobile shopping application designed for IT Del cooperative. Leveraging Bloc and Clean Architecture principles, it offers seamless user authentication through Google. The app enables users to browse products, manage their shopping carts, place orders, and update their profiles. Backed by a Laravel-powered REST API, Delmart ensures efficient data handling and secure transactions.',
     links: [
       {
         iconId: 'github',
-        destination: 'https://github.com/s4shibam/screnoo'
+        destination: 'https://github.com/marloxxx/delmart-app'
       },
-      {
-        iconId: 'live',
-        destination: 'https://screnoo.shibamsaha.dev'
-      }
     ],
     features: [
-      'Record PC / Laptop screen',
-      'Record system or user audio',
-      'Download recording in .mp4 format'
+      'User authentication through Google',
+      'Browse products',
+      'Manage shopping cart',
+      'Place order',
+      'Update profile',
     ],
-    techs: ['html', 'tailwindcss', 'javascript']
+    techs: ['flutter', 'bloc', 'clean architecture', 'google', 'laravel']
   },
   {
-    id: 'filmingg',
-    title: 'Filmingg',
-    image: FILMINGG,
-    color: '#FA4000',
+    id: 'sibotobangun',
+    title: 'Si Boto Bangun',
+    image: SIBOTOBANGUN,
+    color: '#7373E2',
     summary:
-      'Filmingg is a Movie searching / guide web application backed up by OMDB API.',
+      'Si Boto Bangun is an Android application that helps users to calculate the volumes and areas of various 2D and 3D geometric shapes with ease.',
     links: [
       {
         iconId: 'github',
-        destination: 'https://github.com/s4shibam/filmingg'
+        destination: 'https://github.com/marloxxx/SiBotoBangun'
       },
-      {
-        iconId: 'live',
-        destination: 'https://filmingg.shibamsaha.dev'
-      }
     ],
     features: [
       'Responsive UI',
@@ -197,69 +166,54 @@ export const MINOR_PROJECTS: TProject[] = [
     techs: ['html', 'tailwindcss', 'javascript']
   },
   {
-    id: 'calculator',
-    title: 'Calculator',
-    image: CALCULATOR,
-    color: '#009245',
-    summary: 'This is a simple responsive Calculator.',
+    id: 'sid3ti',
+    title: 'SI D3TI',
+    image: SID3TI,
+    color: '#0099FF',
+    summary: 'Discover our world: Explore our vision, mission, and goals. Meet the vibrant members of our community, immerse yourself in our captivating gallery, and stay informed with our dynamic class schedule—all on our dedicated student portal. Your journey starts here!',
     links: [
       {
         iconId: 'github',
-        destination: 'https://github.com/s4shibam/calculator'
+        destination: 'https://github.com/marloxxx/sid3ti'
       },
       {
         iconId: 'live',
-        destination: 'https://calculator.shibamsaha.dev'
+        destination: 'https://d3ti2021.my.id'
       }
     ],
     features: [
-      'Basic binary operations',
-      'Delete and All Clear support',
-      'Glassmorphism Effect'
+      'Responsive UI',
+      'Explore our vision, mission, and goals',
+      'Meet the vibrant members of our community',
+      'Stay informed with our dynamic class schedule'
     ],
-    techs: ['html', 'css', 'javascript']
+    techs: ['html', 'css', 'jquery', 'laravel', 'mysql', 'cms']
   },
   {
-    id: 'digital_clock',
-    title: 'Digital Clock',
-    image: DIGITAL_CLOCK,
-    color: '#C33764',
-    summary: 'This is a simple responsive Digital Clock.',
-    links: [
-      {
-        iconId: 'github',
-        destination: 'https://github.com/s4shibam/digital-clock'
-      },
-      {
-        iconId: 'live',
-        destination: 'https://digital-clock.shibamsaha.dev'
-      }
-    ],
-    features: [
-      'Shows Time',
-      'Shows Date and Day',
-      'Rainbow bubbles background animation'
-    ],
-    techs: ['html', 'css', 'javascript']
-  },
-  {
-    id: 'registration_form_ui',
-    title: 'Registration Form UI',
-    image: REGISTRATION_FORM_UI,
-    color: '#E100FF',
+    id: 'kbl',
+    title: 'KBL',
+    image: '',
+
+    color: '#0099FF',
     summary:
-      'This is a simple front end of a user registration or signup form with glassmorphism styled interface.',
+      "KBT is your ultimate online destination for hassle-free travel ticket bookings, offering a variety of vehicle options. With robust email and live chat authentication support, our platform ensures a seamless user experience. Experience top-notch invoice management and convenient online payment solutions, making transactions a breeze. Your journey begins with KBT – where booking meets simplicity!",
     links: [
       {
         iconId: 'github',
-        destination: 'https://github.com/s4shibam/registration-form-ui'
+        destination: 'https://github.com/marloxxx/kbt'
       },
       {
         iconId: 'live',
-        destination: 'https://registration-form-ui.shibamsaha.dev'
+        destination: 'https://kbl.horas-code.my.id'
       }
     ],
-    features: ['Responsive User Interface', 'Glassmorphism Effect'],
-    techs: ['html', 'css']
+    features: [
+      'Responsive UI',
+      'Safe and secure Authentication',
+      'Invoice management',
+      'Online payment system',
+      'Live chat support',
+    ],
+    techs: ['html', 'css', 'jquery', 'laravel', 'mysql', 'cms', 'smtp']
   }
 ]

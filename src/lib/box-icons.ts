@@ -14,6 +14,7 @@ export enum BOXICONS {
   'facebook' = 'bxl-facebook',
   'instagram' = 'bxl-instagram',
   'telegram' = 'bxl-telegram',
+  'youtube' = 'bxl-youtube',
 
   'live' = 'bx-globe',
   'code' = 'bx-code'
