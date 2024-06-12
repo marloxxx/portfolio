@@ -11,9 +11,8 @@ export enum BOXICONS {
   'github' = 'bxl-github',
   'twitter' = 'bxl-twitter',
   'linkedin' = 'bxl-linkedin',
-  'facebook' = 'bxl-facebook',
-  'instagram' = 'bxl-instagram',
   'telegram' = 'bxl-telegram',
+  'whatsapp' = 'bxl-whatsapp',
   'youtube' = 'bxl-youtube',
 
   'live' = 'bx-globe',

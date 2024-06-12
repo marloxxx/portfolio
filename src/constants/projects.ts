@@ -1,5 +1,9 @@
 import { BOXICONS } from '@/lib/box-icons'
 import ASTINA from '@/projects/astina.webp'
+import DELHUB from '@/projects/delhub.webp'
+import DELMART from '@/projects/delmart.webp'
+import DELMARTWEB from '@/projects/delmart-web.webp'
+import ITO from '@/projects/ito.webp'
 import RAJASTOREVPN from '@/projects/rajastorevpn.webp'
 import SIBOTOBANGUN from '@/projects/sibotobangun.webp'
 import SID3TI from '@/projects/sid3ti.webp'
@@ -119,14 +123,80 @@ export const MAJOR_PROJECTS: TProject[] = [
       'Location tracking and payment management',
     ],
     techs: ['flutter', 'bloc', 'clean-architecture', 'thermal-printer', 'google-maps', 'geocordinates', 'rest - api']
+  },
+  {
+    id: 'kbt',
+    title: 'KBL - Koperasi Bintang Laguboti',
+    image: '',
+
+    color: '#0099FF',
+    summary:
+      "KBL is your ultimate online destination for hassle-free travel ticket bookings, offering a variety of vehicle options. With robust email and live chat authentication support, our platform ensures a seamless user experience. Experience top-notch invoice management and convenient online payment solutions, making transactions a breeze. Your journey begins with KBT – where booking meets simplicity!",
+    links: [
+      {
+        iconId: 'github',
+        destination: 'https://github.com/marloxxx/kbt'
+      },
+      {
+        iconId: 'live',
+        destination: 'https://travelbook.horas-code.my.id'
+      }
+    ],
+    features: [
+      'Responsive UI',
+      'Safe and secure Authentication',
+      'Invoice management',
+      'Online payment system',
+      'Live chat support',
+    ],
+    techs: ['html', 'css', 'jquery', 'laravel', 'mysql', 'cms', 'smtp']
   }
 ]
 
 export const MINOR_PROJECTS: TProject[] = [
   {
-    id: 'delmart',
-    title: 'Delmart',
-    image: '',
+    id: 'ito-humbang',
+    title: 'Information Tourism App',
+    image: ITO,
+    color: '#00C853',
+    summary: "Discover the beauty and culture of Humbang Hasundutan with the ITO Mobile App! This cutting-edge application is your ultimate travel companion, offering comprehensive information about local attractions and exciting events. Seamlessly integrated with Google Maps, ITO ensures you navigate with ease and precision, providing real-time updates on tourist destinations. Whether you're exploring stunning natural landscapes or immersing yourself in vibrant cultural festivals, ITO Mobile App makes your journey unforgettable and hassle-free. Experience Humbang Hasundutan like never before, right at your fingertips.",
+    links: [
+      {
+        iconId: 'live',
+        destination: 'https://drive.google.com/file/d/1Be3537_bMXcChTSoehmUkfpYqh4Uv4Va/view?usp=sharing'
+      }
+    ],
+    features: [
+      'Geolocation and Google Maps integration',
+      'User-friendly interfaces',
+      'Authentication and Authorization',
+    ],
+    techs: ['flutter', 'getx', 'clean-architecture', 'google-maps', 'geocordinates', 'rest-api']
+  },
+  {
+    id: 'delhub-app',
+    title: 'Delhub App',
+    image: DELHUB,
+    color: '#3493C9',
+    summary: "Delhub App is a cutting-edge tool designed to simplify and enhance the management of final projects, theses, and internships for students and faculty. It offers a seamless scheduling system, real-time notifications, and transparent grading, ensuring smooth communication and efficient coordination. With timely reminders and a user-friendly interface, Delhub App ensures you never miss a meeting or deadline, providing a secure and reliable platform that fosters academic success and integrity.",
+    links: [
+      {
+        iconId: 'github',
+        destination: 'https://github.com/marloxxx/delhub'
+      }
+    ],
+    features: [
+      'Scheduling system',
+      'Real-time notifications',
+      'Transparent grading',
+      'User-friendly interface',
+    ],
+    techs: ['flutter', 'bloc', 'clean-architecture', 'rest-api', 'firebase-messaging']
+  },
+  {
+    id: 'delmart-app',
+    title: 'Delmart App',
+    image: DELMART,
     color: '#FF8F00',
     summary:
       'Delmart is a Flutter-based mobile shopping application designed for IT Del cooperative. Leveraging Bloc and Clean Architecture principles, it offers seamless user authentication through Google. The app enables users to browse products, manage their shopping carts, place orders, and update their profiles. Backed by a Laravel-powered REST API, Delmart ensures efficient data handling and secure transactions.',
@@ -144,6 +214,32 @@ export const MINOR_PROJECTS: TProject[] = [
       'Update profile',
     ],
     techs: ['flutter', 'bloc', 'clean architecture', 'google', 'laravel']
+  },
+  {
+    id: 'delmart',
+    title: 'Delmart',
+    image: DELMARTWEB,
+    color: '#FF8F00',
+    summary: 'Delmart Admin and REST API is a comprehensive backend system designed for the Delmart e-commerce platform, which serves the IT Del cooperative. Built with Laravel, this project encompasses both an admin panel for managing various aspects of the e-commerce application and a REST API to facilitate interaction with the mobile frontend developed in Flutter.',
+    links: [
+      {
+        iconId: 'github',
+        destination: 'https://github.com/marloxxx/delmart'
+      },
+      {
+        iconId: 'live',
+        destination: 'https://delmart.horas-code.my.id'
+      }
+    ],
+    features: [
+      'Admin panel',
+      'REST API',
+      'User authentication',
+      'User management',
+      'Product management',
+      'Social media integration',
+    ],
+    techs: ['html', 'css', 'jquery', 'laravel', 'mysql']
   },
   {
     id: 'sibotobangun',
@@ -188,32 +284,5 @@ export const MINOR_PROJECTS: TProject[] = [
       'Stay informed with our dynamic class schedule'
     ],
     techs: ['html', 'css', 'jquery', 'laravel', 'mysql', 'cms']
-  },
-  {
-    id: 'kbl',
-    title: 'KBL',
-    image: '',
-
-    color: '#0099FF',
-    summary:
-      "KBT is your ultimate online destination for hassle-free travel ticket bookings, offering a variety of vehicle options. With robust email and live chat authentication support, our platform ensures a seamless user experience. Experience top-notch invoice management and convenient online payment solutions, making transactions a breeze. Your journey begins with KBT – where booking meets simplicity!",
-    links: [
-      {
-        iconId: 'github',
-        destination: 'https://github.com/marloxxx/kbt'
-      },
-      {
-        iconId: 'live',
-        destination: 'https://kbl.horas-code.my.id'
-      }
-    ],
-    features: [
-      'Responsive UI',
-      'Safe and secure Authentication',
-      'Invoice management',
-      'Online payment system',
-      'Live chat support',
-    ],
-    techs: ['html', 'css', 'jquery', 'laravel', 'mysql', 'cms', 'smtp']
   }
 ]
