@@ -4,6 +4,7 @@ import DELHUB from '@/projects/delhub.webp'
 import DELMARTWEB from '@/projects/delmart-web.webp'
 import DELMART from '@/projects/delmart.webp'
 import ITO from '@/projects/ito.webp'
+import KBL from '@/projects/kbl.webp'
 import RAJASTOREVPN from '@/projects/rajastorevpn.webp'
 import SIBOTOBANGUN from '@/projects/sibotobangun.webp'
 import SID3TI from '@/projects/sid3ti.webp'
@@ -127,8 +128,7 @@ export const MAJOR_PROJECTS: TProject[] = [
   {
     id: 'kbt',
     title: 'KBL - Koperasi Bintang Laguboti',
-    image: '',
-
+    image: KBL,
     color: '#0099FF',
     summary:
       "KBL is your ultimate online destination for hassle-free travel ticket bookings, offering a variety of vehicle options. With robust email and live chat authentication support, our platform ensures a seamless user experience. Experience top-notch invoice management and convenient online payment solutions, making transactions a breeze. Your journey begins with KBT – where booking meets simplicity!",
