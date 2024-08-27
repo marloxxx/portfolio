@@ -37,9 +37,9 @@ A computer science undergrad's portfolio website showcasing all accomplishments 
 
 ## 🖼️ Screenshots
 
-![Hero](./readme_assets/screenshot_1.png)
-![Stacks](./readme_assets/screenshot_2.png)
-![Projects](./readme_assets/screenshot_3.png)
+![Hero](./readme_assets/screenshot_1.jpeg)
+![Stacks](./readme_assets/screenshot_2.jpeg)
+![Projects](./readme_assets/screenshot_3.jpeg)
 
 ## 👋🏻 Contact
 
