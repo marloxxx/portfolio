@@ -1,7 +1,7 @@
 import {
   IconType,
-  SiAmazonaws,
-  SiAmazonawsHex,
+  SiAmazonwebservices,
+  SiAmazonwebservicesHex,
   SiApache,
   SiApacheHex,
   SiBitbucket,
@@ -14,8 +14,8 @@ import {
   SiCHex,
   SiCplusplus,
   SiCplusplusHex,
-  SiCsharp,
-  SiCsharpHex,
+  SiDotnet,
+  SiDotnetHex,
   SiCss3,
   SiCss3Hex,
   SiDart,
@@ -102,8 +102,6 @@ import {
   SiTrelloHex,
   SiTypescript,
   SiTypescriptHex,
-  SiVisualstudiocode,
-  SiVisualstudiocodeHex,
   SiVite,
   SiViteHex
 } from '@icons-pack/react-simple-icons'
@@ -175,8 +173,8 @@ export const STACK_CATEGORIES: TStackCategory[] = [
       },
       {
         title: '.Net',
-        Icon: SiCsharp,
-        color: SiCsharpHex
+        Icon: SiDotnet,
+        color: SiDotnetHex
       },
       {
         title: 'Dart',
@@ -334,11 +332,6 @@ export const STACK_CATEGORIES: TStackCategory[] = [
         color: SiGitHex
       },
       {
-        title: 'VS Code',
-        Icon: SiVisualstudiocode,
-        color: SiVisualstudiocodeHex
-      },
-      {
         title: 'ChatGPT',
         Icon: SiOpenai,
         color: SiOpenaiHex
@@ -409,8 +402,8 @@ export const STACK_CATEGORIES: TStackCategory[] = [
       },
       {
         title: 'AWS',
-        Icon: SiAmazonaws,
-        color: SiAmazonawsHex
+        Icon: SiAmazonwebservices,
+        color: SiAmazonwebservicesHex
       }
 
     ]
