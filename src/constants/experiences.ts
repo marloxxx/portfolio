@@ -1,5 +1,6 @@
 import DEL from '@/companies/del.webp'
 import GCI from '@/companies/gci.webp'
+import SI from '@/companies/si.webp'
 
 export type TCompany = {
   name: string
@@ -30,6 +31,27 @@ export const EXPERIENCES_HEADER = {
 export const EXPERIENCES: TExperience[] = [
   {
     company: {
+      name: 'PT Surveyor Indonesia',
+      logo: SI,
+      link: 'https://ptsi.co.id/',
+      color: '#FF0000'
+    },
+    designation: 'Student',
+    location: 'South Jakarta, DKI Jakarta, Indonesia',
+    tenure: { from: '2024', to: 'Present' },
+    description: [
+      'Developed Mobile Application called SOLUSI to provide solutions to your business problems.',
+    ],
+    techStack: [
+      'Flutter',
+      'Git',
+      'Firebase',
+      'Clean Architecture',
+      'Bloc'
+    ]
+  },
+  {
+    company: {
       name: 'PT. Garuda Cyber Indonesia',
       logo: GCI,
       link: 'https://garudacyber.co.id/',
@@ -37,7 +59,7 @@ export const EXPERIENCES: TExperience[] = [
     },
     designation: 'Programmer Intern',
     location: 'Pekanbaru, Riau, Indonesia',
-    tenure: { from: 'February 2024', to: 'Present' },
+    tenure: { from: 'February 2024', to: 'June 2024' },
     description: [
       'Developed two mobile applications and one website, demonstrating proficiency in cross-platform development.',
       'Completed the UI for the Smart School parent app within a week, successfully meeting project deadlines.',
