@@ -38,7 +38,7 @@ export const EXPERIENCES: TExperience[] = [
     },
     designation: 'Student',
     location: 'South Jakarta, DKI Jakarta, Indonesia',
-    tenure: { from: '2024', to: 'Present' },
+    tenure: { from: 'November 2024', to: 'Present' },
     description: [
       'Developed Mobile Application called SOLUSI to provide solutions to your business problems.',
     ],
