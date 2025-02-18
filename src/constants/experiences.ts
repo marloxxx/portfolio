@@ -36,18 +36,23 @@ export const EXPERIENCES: TExperience[] = [
       link: 'https://ptsi.co.id/',
       color: '#FF0000'
     },
-    designation: 'Student',
+    designation: 'Programmer Staff',
     location: 'South Jakarta, DKI Jakarta, Indonesia',
     tenure: { from: 'November 2024', to: 'Present' },
     description: [
       'Developed Mobile Application called SOLUSI to provide solutions to your business problems.',
+      'Developed Helpdesk Application to support ticketing and customer support within the company.',
     ],
     techStack: [
       'Flutter',
       'Git',
       'Firebase',
       'Clean Architecture',
-      'Bloc'
+      'Bloc',
+      'Push Notification',
+      'Laravel',
+      'Websocket',
+      'MySQL'
     ]
   },
   {
