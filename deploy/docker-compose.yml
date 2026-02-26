@@ -1,0 +1,19 @@
+# Place on VPS at /opt/apps/portfolio/docker-compose.yml (see Phase 4 in VPS_PRODUCTION_BRIEF.md).
+# Replace YOUR_GITHUB_USERNAME and yourdomain.com. Network "web" must exist: docker network create web
+
+services:
+  portfolio:
+    image: ghcr.io/YOUR_GITHUB_USERNAME/portfolio:latest
+    restart: unless-stopped
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`yourdomain.com`)"
+      - "traefik.http.routers.portfolio.tls=true"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
+
+networks:
+  web:
+    external: true

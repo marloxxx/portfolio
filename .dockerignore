@@ -1,0 +1,43 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# build output
+.next
+out
+build
+
+# git
+.git
+.gitignore
+
+# misc
+.DS_Store
+*.pem
+*.log
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# docs and dev
+README.md
+readme_assets
+.cursor
+.editorconfig
+.eslintrc*
+.prettierrc*
+*.md
+
+# tests and coverage
+coverage
+__tests__
+*.test.*
+*.spec.*
