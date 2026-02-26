@@ -3,20 +3,19 @@ import ASTINA from '@/projects/astina.webp'
 import DELHUB from '@/projects/delhub.webp'
 import DELMARTWEB from '@/projects/delmart-web.webp'
 import DELMART from '@/projects/delmart.webp'
+import GRAGEAPP from '@/projects/grage-app.webp'
+import HELPDESKWEB from '@/projects/helpdesk-web.webp'
 import HELPDESK from '@/projects/helpdesk.webp'
 import ITO from '@/projects/ito.webp'
 import KBL from '@/projects/kbl.webp'
-import PLACEHOLDER from '@/projects/helpdesk.webp'
+import KBR from '@/projects/kbr.webp'
+import MONTRAQ from '@/projects/montraq.webp'
 import RAJASTOREVPN from '@/projects/rajastorevpn.webp'
 import SIBOTOBANGUN from '@/projects/sibotobangun.webp'
 import SID3TI from '@/projects/sid3ti.webp'
 import SIPORTAL from '@/projects/siportal.webp'
 import SIRAM from '@/projects/siram.webp'
 import VPNSTUNNEL from '@/projects/vpnstunnel.webp'
-
-// import GRAGEMALLAPP from '@/projects/gragemall-app.webp'
-// import KBR from '@/projects/kbr-koperasi.webp'
-// import SOLUSI_APP from '@/projects/solusi-app.webp'
 
 
 export type TProject = {
@@ -47,17 +46,12 @@ export const MINOR_PROJECT_HEADER = {
 export const MAJOR_PROJECTS: TProject[] = [
   {
     id: 'siportal-sso',
-    title: 'SI Portal SSO - Enterprise Single Sign-On',
+    title: 'SI Portal SSO',
     image: SIPORTAL,
     color: '#1E40AF',
     summary:
       'SI Portal SSO is an enterprise-grade Single Sign-On platform developed for PT Surveyor Indonesia to manage centralized access to all internal company applications. Built with Laravel 12 and integrated with FusionAuth Enterprise, the system enables employees to access multiple applications with a single authentication, significantly improving operational efficiency and enterprise security. The platform features dual-protocol support (SSO V1 & V2), OAuth 2.0, OpenID Connect, JWT-based authentication, and a comprehensive webhook system for global logout functionality. With advanced security features including token encryption, rate limiting, CSRF protection, and comprehensive audit logging, SI Portal SSO ensures secure and seamless access management across the entire organization.',
-    links: [
-      {
-        iconId: 'live',
-        destination: 'https://siportal.ptsi.co.id'
-      }
-    ],
+    links: [],
     features: [
       'Dual-protocol SSO support (V1 & V2) for legacy and modern applications',
       'FusionAuth Enterprise integration with OAuth 2.0 and OpenID Connect',
@@ -92,67 +86,57 @@ export const MAJOR_PROJECTS: TProject[] = [
       'spatie-activity-log',
     ]
   },
-  // {
-  //   id: 'helpdesk-management-system',
-  //   title: 'Helpdesk Management System',
-  //   image: HELPDESK,
-  //   color: '#3B82F6',
-  //   summary:
-  //     'A comprehensive web-based helpdesk management system for IT service ticket management with real-time notifications, Zoom API integration, and SSO authentication. Built using Laravel 11 with modular event-driven architecture, featuring role-based access control, ticket tracking, assignment system, and seamless integration with external services like Firebase, FusionAuth, and Zoom API.',
-  //   links: [
-  //     {
-  //       iconId: 'live',
-  //       destination: 'https://helpdesk.ptsi.co.id'
-  //     }
-  //   ],
-  //   features: [
-  //     'Comprehensive ticket management system with status tracking',
-  //     'Real-time notifications using Laravel Reverb (WebSocket)',
-  //     'Zoom API integration for automated meeting creation',
-  //     'Role-based access control with 4 access levels',
-  //     'SSO authentication via FusionAuth',
-  //     'Firebase Cloud Messaging for push notifications',
-  //     'Bulk user import from Excel',
-  //     'Employee data synchronization from SI Portal API',
-  //     'Live chat system between users and technicians',
-  //     'FAQ management and service catalog',
-  //     'Waiting list management',
-  //     'Audit logging and activity tracking',
-  //     'Dashboard analytics with ticket statistics',
-  //     'SLA tracking and performance monitoring',
-  //     'Ticket rating and feedback system',
-  //   ],
-  //   techs: [
-  //     'laravel',
-  //     'php',
-  //     'mysql',
-  //     'tailwindcss',
-  //     'javascript',
-  //     'websocket',
-  //     'reverb',
-  //     'firebase',
-  //     'fusionauth',
-  //     'zoom-api',
-  //     'rest-api',
-  //     'eloquent-orm',
-  //     'queue',
-  //     'excel',
-  //     'datatables',
-  //   ]
-  // },
   {
     id: 'helpdesk-ptsi',
-    title: 'Helpdesk Mobile App - PTSI',
+    title: 'Helpdesk PTSI',
+    image: HELPDESKWEB,
+    color: '#3B82F6',
+    summary:
+      'A comprehensive web-based helpdesk management system for IT service ticket management with real-time notifications, Zoom API integration, and SSO authentication. Built using Laravel 11 with modular event-driven architecture, featuring role-based access control, ticket tracking, assignment system, and seamless integration with external services like Firebase, FusionAuth, and Zoom API.',
+    links: [],
+    features: [
+      'Comprehensive ticket management system with status tracking',
+      'Real-time notifications using Laravel Reverb (WebSocket)',
+      'Zoom API integration for automated meeting creation',
+      'Role-based access control with 4 access levels',
+      'SSO authentication via FusionAuth',
+      'Firebase Cloud Messaging for push notifications',
+      'Bulk user import from Excel',
+      'Employee data synchronization from SI Portal API',
+      'Live chat system between users and technicians',
+      'FAQ management and service catalog',
+      'Waiting list management',
+      'Audit logging and activity tracking',
+      'Dashboard analytics with ticket statistics',
+      'SLA tracking and performance monitoring',
+      'Ticket rating and feedback system',
+    ],
+    techs: [
+      'laravel',
+      'php',
+      'mysql',
+      'tailwindcss',
+      'javascript',
+      'websocket',
+      'reverb',
+      'firebase',
+      'fusionauth',
+      'zoom-api',
+      'rest-api',
+      'eloquent-orm',
+      'queue',
+      'excel',
+      'datatables',
+    ]
+  },
+  {
+    id: 'helpdesk-ptsi-mobile',
+    title: 'Helpdesk PTSI Mobile',
     image: HELPDESK,
-    color: '#0099FF',
+    color: '#3B82F6',
     summary:
       'A comprehensive Flutter-based helpdesk application for PTSI (PT Solusi Integrasi) featuring a Performance-Based Ticket Management System with advanced SLA tracking, priority matrix, and dual feedback system. The app revolutionizes IT support ticket management with auto-calculated priorities, real-time SLA countdown timers, and comprehensive performance analytics. Built with clean architecture and BLoC pattern, it ensures scalable, maintainable code while delivering an exceptional user experience across Android and iOS platforms.',
-    links: [
-      {
-        iconId: 'live',
-        destination: 'https://helpdesk.ptsi.co.id'
-      }
-    ],
+    links: [],
     features: [
       'Performance-Based Ticket Management System',
       'Auto-calculated Priority Matrix (Impact × Urgency)',
@@ -241,59 +225,59 @@ export const MAJOR_PROJECTS: TProject[] = [
   //     'dependency-injection'
   //   ]
   // },
-  // {
-  //   id: 'grage-mall-app',
-  //   title: 'Grage Mall App',
-  //   image: PLACEHOLDER,
-  //   color: '#1E7ED4',
-  //   summary:
-  //     'Grage Mall App is a comprehensive Flutter-based mobile application designed to enhance the shopping mall experience for visitors. The app provides a complete digital companion solution featuring an integrated loyalty points system, comprehensive tenant directory, event calendar, and various customer engagement features. Built with Clean Architecture and BLoC pattern, it offers seamless backend API integration, real-time push notifications, and modern UI/UX design with custom animations. The application enables users to earn and redeem loyalty points, browse tenant information, stay updated with mall events and promotions, manage their profiles, and enjoy a streamlined shopping experience with features like receipt upload, daily check-ins, and digital membership cards.',
-  //   links: [
-  //     {
-  //       iconId: 'live',
-  //       destination: 'https://play.google.com/store/apps/details?id=com.gragegroup.grageapp'
-  //     }
-  //   ],
-  //   features: [
-  //     'Loyalty points system with automatic calculation',
-  //     'Digital membership card with barcode scanner',
-  //     'Comprehensive tenant directory with category filtering',
-  //     'Real-time search functionality',
-  //     'Event calendar and promotion management',
-  //     'Push notifications via Firebase Cloud Messaging',
-  //     'OTP authentication and Google Sign-In integration',
-  //     'Receipt upload for point accumulation',
-  //     'Daily check-in feature',
-  //     'Transaction history and point redemption',
-  //     'User profile management',
-  //     'Favorite stores functionality',
-  //     'Location services integration',
-  //     'Responsive UI with custom animations',
-  //   ],
-  //   techs: [
-  //     'flutter',
-  //     'dart',
-  //     'bloc',
-  //     'clean-architecture',
-  //     'firebase',
-  //     'firebase-messaging',
-  //     'firebase-analytics',
-  //     'firebase-crashlytics',
-  //     'rest-api',
-  //     'dio',
-  //     'getit',
-  //     'auto-route',
-  //     'google-sign-in',
-  //     'otp',
-  //     'lottie',
-  //     'shimmer',
-  //     'geolocator',
-  //     'image-picker',
-  //     'cached-network-image',
-  //     'google-maps',
-  //     'table-calendar',
-  //   ]
-  // },
+  {
+    id: 'grage-mall-app',
+    title: 'Grage Mall App',
+    image: GRAGEAPP,
+    color: '#18A08B',
+    summary:
+      'Grage Mall App is a comprehensive Flutter-based mobile application designed to enhance the shopping mall experience for visitors. The app provides a complete digital companion solution featuring an integrated loyalty points system, comprehensive tenant directory, event calendar, and various customer engagement features. Built with Clean Architecture and BLoC pattern, it offers seamless backend API integration, real-time push notifications, and modern UI/UX design with custom animations. The application enables users to earn and redeem loyalty points, browse tenant information, stay updated with mall events and promotions, manage their profiles, and enjoy a streamlined shopping experience with features like receipt upload, daily check-ins, and digital membership cards.',
+    links: [
+      {
+        iconId: 'live',
+        destination: 'https://play.google.com/store/apps/details?id=com.gragegroup.grageapp'
+      }
+    ],
+    features: [
+      'Loyalty points system with automatic calculation',
+      'Digital membership card with barcode scanner',
+      'Comprehensive tenant directory with category filtering',
+      'Real-time search functionality',
+      'Event calendar and promotion management',
+      'Push notifications via Firebase Cloud Messaging',
+      'OTP authentication and Google Sign-In integration',
+      'Receipt upload for point accumulation',
+      'Daily check-in feature',
+      'Transaction history and point redemption',
+      'User profile management',
+      'Favorite stores functionality',
+      'Location services integration',
+      'Responsive UI with custom animations',
+    ],
+    techs: [
+      'flutter',
+      'dart',
+      'bloc',
+      'clean-architecture',
+      'firebase',
+      'firebase-messaging',
+      'firebase-analytics',
+      'firebase-crashlytics',
+      'rest-api',
+      'dio',
+      'getit',
+      'auto-route',
+      'google-sign-in',
+      'otp',
+      'lottie',
+      'shimmer',
+      'geolocator',
+      'image-picker',
+      'cached-network-image',
+      'google-maps',
+      'table-calendar',
+    ]
+  },
   {
     id: 'rajastorevpn',
     title: 'RajastoreVPN',
@@ -409,8 +393,8 @@ export const MAJOR_PROJECTS: TProject[] = [
   },
   {
     id: 'kbr-koperasi',
-    title: 'KBR Koperasi Mobile Banking App',
-    image: PLACEHOLDER,
+    title: 'KBR Koperasi Mobile App',
+    image: KBR,
     color: '#0099FF',
     summary:
       'KBR Koperasi Mobile Banking App is a comprehensive Flutter-based mobile banking application designed for KBR Koperasi members. The app provides complete digital financial services including savings management (principal, mandatory, and special savings), loan applications with simulation and tracking, installment management, transaction history, top-up and withdrawal features, and real-time notifications. Built with Clean Architecture and BLoC pattern, the app ensures scalability, maintainability, and optimal performance. With multi-language support (Indonesian and English), modern UI/UX with Material Design, and seamless RESTful API integration, KBR Koperasi App delivers a secure and user-friendly banking experience for cooperative members.',
@@ -443,6 +427,55 @@ export const MAJOR_PROJECTS: TProject[] = [
       'firebase-crashlytics',
       'lottie'
     ]
+  },
+  {
+    id: 'montraq',
+    title: 'Montraq',
+    image: MONTRAQ,
+    color: '#43af4b',
+    summary:
+      'Montraq is a web-based personal and family finance manager built with Laravel 12 and Filament v4. It provides full-featured budgeting, multi-account tracking, and receipt scanning via Tesseract OCR—all without paid APIs. The app supports multiple roles (Owner, Member, Viewer), monthly budget limits with progress tracking, mandatory expense management with due dates, and rule-based financial insights including a health score. Receipt OCR runs in a queue: upload → extract text → parse amount, date, merchant → suggest category → draft transaction. Monthly locking prevents edits to closed periods. The admin panel offers dashboard widgets for balance overview, income/expense charts, budget progress, bill checklist, top spending categories, and AI-generated insights.',
+    links: [
+      {
+        iconId: 'live',
+        destination: 'https://montraq.horas-code.my.id'
+      }
+    ],
+    features: [
+      'Multi-role access (Owner, Member, Viewer) with Spatie Laravel Permission',
+      'Financial accounts (cash, bank, e-wallet) with balance tracking',
+      'Income/expense categories (system + custom)',
+      'Transaction CRUD with backdate support and draft status',
+      'Monthly budgets with progress tracking and widgets',
+      'Mandatory expenses (recurring bills) with due dates and status',
+      'Recurring transactions (auto-generated)',
+      'Receipt OCR: upload → queue → Tesseract extract → regex parse → draft transaction',
+      'Monthly lock to prevent editing closed months',
+      'Rule-based financial insights and health score (0–100)',
+      'Dashboard: balance overview, 6-month charts, budget table, bill checklist, top categories, insights',
+      'User and role management in Filament admin',
+      'Queue-based OCR processing for scalability',
+      'Supports MySQL, PostgreSQL, or SQLite',
+    ],
+    techs: [
+      'laravel',
+      'php',
+      'filament',
+      'mysql',
+      'spatie-permission',
+      'spatie-activity-log',
+      'tesseract',
+      'ocr',
+      'queue',
+      'redis',
+      'inertia',
+      'vue',
+      'tailwindcss',
+      'vite',
+      'blade',
+      'rest-api',
+      'eloquent-orm',
+    ],
   }
 ]
 
