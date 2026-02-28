@@ -235,7 +235,7 @@ export const MAJOR_PROJECTS: TProject[] = [
     links: [
       {
         iconId: 'live',
-        destination: 'https://play.google.com/store/apps/details?id=com.gragegroup.grageapp'
+        destination: 'https://play.google.com/store/apps/details?id=id.co.gragegroup.grageapp&pcampaignid=web_share'
       }
     ],
     features: [
@@ -401,7 +401,7 @@ export const MAJOR_PROJECTS: TProject[] = [
     links: [
       {
         iconId: 'live',
-        destination: 'https://play.google.com/store/apps/details?id=com.kbrkoperasi.mobile&hl=id'
+        destination: 'https://play.google.com/store/apps/details?id=com.kbrkoperasi.mobile&pcampaignid=web_share'
       }
     ],
     features: [
