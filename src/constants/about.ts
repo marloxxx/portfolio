@@ -12,13 +12,17 @@ export const ABOUT: TAbout[] = [
   {
     type: 'summary',
     description: [
-      "Hi, I'm Horas Siregar. Highly adaptable Full Stack Developer proficient in PHP (Laravel), Java (Spring), Golang, JavaScript (jQuery), Next JS, React JS, Node JS, HTML, CSS, Dart (Flutter), and Python. Skilled in REST API development, Git, Linux, and cloud technologies (AWS, Azure). Strong problem-solving abilities and collaborative mindset for dynamic team contributions."
+      "Backend-focused Fullstack Developer experienced in building secure and scalable enterprise web and mobile systems. Skilled in designing microservices-oriented architectures, RESTful APIs, and distributed authentication platforms using OAuth 2.0 and OpenID Connect.",
+      "Proven track record delivering 15+ production solutions including Enterprise Single Sign-On (SSO), AI-powered business systems, real-time helpdesk platforms, and fintech applications.",
+      "Specialized in Laravel, Flutter, and security-focused backend development with strong emphasis on system design, performance optimization, and clean architecture."
     ]
   },
   {
     type: 'education',
     description: [
-      'Diploma 3 of Information Technology, Del Institute of Technology',
+      'Bina Nusantara — Major in Computer Science (GPA 3.88/4.00), November 2024 – Present',
+      'Del Institute of Technology — Major in Information Technology (GPA 3.80/4.00), August 2021 – September 2024',
+      'Activities: Participant of Huawei Summer Camp Student 2023 (5G, Cloud Computing, Big Data, AI); Matriculation Assistant for new students (August 2022).'
     ]
   },
   {
