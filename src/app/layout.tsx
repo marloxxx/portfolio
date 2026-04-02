@@ -36,7 +36,9 @@ export async function generateMetadata(): Promise<Metadata> {
       ]
     }
   }
-  const pathname = new URL(headers().get('x-request-url')!).pathname
+  const h = await headers()
+  const requestUrl = h.get('x-request-url') ?? APP_URL
+  const pathname = new URL(requestUrl).pathname
 
   const title =
     'Horas Siregar' +

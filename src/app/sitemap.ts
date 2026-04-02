@@ -6,7 +6,7 @@ import { APP_URL } from '@/constants/others'
 import { MAJOR_PROJECTS, MINOR_PROJECTS } from '@/constants/projects'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const headersList = headers()
+  const headersList = await headers()
   let domain = headersList.get('host') as string
 
   if (domain.startsWith('localhost')) {
