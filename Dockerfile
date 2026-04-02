@@ -23,6 +23,9 @@ ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 
 RUN npm run build
 
+# Next standalone expects ./public at runtime; COPY fails if the directory is missing from the repo
+RUN mkdir -p public
+
 # --- Stage 4: runtime (minimal) ---
 FROM base AS runner
 WORKDIR /app
