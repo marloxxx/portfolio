@@ -1,56 +1,110 @@
-# Deploy: Portfolio on VPS with Traefik
+# Deploy: portfolio on VPS (Traefik)
 
-This app fits into the [VPS Production Brief](VPS_PRODUCTION_BRIEF.md): multi-project, Docker network `web`, Traefik, and Watchtower for auto deploy.
+Source repository: **[github.com/marloxxx/portfolio](https://github.com/marloxxx/portfolio)**.
 
-## One-time VPS setup
+Deployment uses **Docker Compose** with **Traefik** labels: attach the app to an external Docker network named **`proxy`**, TLS on **`websecure`** with resolver **`letsencrypt`**, and a **local multi-stage** image build (no container registry).
 
-1. **Phase 1–2:** Harden VPS, install Docker, create network:
+**Hostname in use:** **horas-code.my.id** (set in `docker-compose.yml`).
+
+---
+
+## From clone to deploy (VPS)
+
+Run everything below **on the VPS** over SSH.
+
+### Before you start (one-time per server)
+
+1. **DNS** — Point **horas-code.my.id** at this server’s **public IP** (**A** / **AAAA**). Do this before the first HTTPS request so Let’s Encrypt can validate (ports **80** and **443** must reach Traefik).
+
+2. **Traefik and `proxy` network** — Traefik must be running (Docker provider enabled) with **`websecure`** and a cert resolver named **`letsencrypt`**, matching the labels in `docker-compose.yml`. The external network **`proxy`** must exist so this stack can join it:
+
    ```bash
-   docker network create web
+   docker network ls | grep proxy
    ```
 
-2. **Phase 4 layout:** Create app directory:
+   If nothing creates that network yet, create it once: `docker network create proxy` — or define it in the same compose setup as Traefik, consistent with how your server is managed.
+
+### Steps: clone → build → run
+
+1. **Create the apps directory and clone the repository**
+
    ```bash
-   sudo mkdir -p /opt/apps/portfolio
-   cd /opt/apps/portfolio
+   sudo mkdir -p /opt/apps
+   sudo chown "$USER":"$USER" /opt/apps
+   cd /opt/apps
+   git clone https://github.com/marloxxx/portfolio.git portfolio
+   cd portfolio
    ```
 
-3. **Copy `docker-compose.yml`** from this folder. Edit:
-   - Replace `YOUR_GITHUB_USERNAME` with your GitHub username (image: `ghcr.io/<username>/portfolio:latest`).
-   - Replace `yourdomain.com` with your domain.
+   Layout must be: **`Dockerfile`** and **`package.json`** at the repo root, **`deploy/docker-compose.yml`** under **`deploy/`** (Compose `context: ..` builds from the root).
 
-4. **GHCR:** After the first CI push, set the package to **Public** in GitHub Packages so the VPS can pull without auth. For private repos, run `docker login ghcr.io` on the VPS (e.g. with a PAT).
+2. **Build the Docker image and start the stack**
 
-5. **Phase 5 — Watchtower:** Run Watchtower on the VPS so it pulls new images and restarts containers (see [VPS_PRODUCTION_BRIEF.md](VPS_PRODUCTION_BRIEF.md)). No SSH deploy step needed from CI.
-
-6. **Start the app:**
    ```bash
-   cd /opt/apps/portfolio
+   cd deploy
+   docker compose build
    docker compose up -d
    ```
 
-## GitHub Actions (CI only; deploy via Watchtower)
+   The first build may take several minutes (`npm ci` + `next build`).
 
-Repo: **Settings → Secrets and variables → Actions.**
+3. **Verify**
 
-This project’s workflow only **builds and pushes** the image to GHCR. Deploy is done by **Watchtower** on the VPS (no SSH secrets required for deploy).
+   ```bash
+   docker compose ps
+   docker compose logs -f web
+   ```
 
-| Secret | Required for CI? | Description |
-|--------|------------------|-------------|
-| `SSH_PRIVATE_KEY` | No (Watchtower flow) | Only if you add a manual SSH deploy step later |
-| `VPS_HOST` | No | — |
-| `VPS_USER` | No | — |
+   Open **https://horas-code.my.id**. If the certificate is not ready yet, wait briefly and refresh.
 
-No repo secrets needed for the default “build + push; Watchtower updates” flow.
+---
 
-## Deploy flow
+## After you push new code
 
-1. **git push** to `main`
-2. GitHub Actions: install → lint → build → build Docker image → push to GHCR.
-3. **Watchtower** on the VPS sees the new image and runs pull + restart for the portfolio container.
+On the VPS:
 
-Ensure Traefik (Phase 2) is running with Docker provider and certificate resolver (e.g. `letsencrypt`) so labels on this stack are picked up.
+```bash
+cd /opt/apps/portfolio
+git pull
+cd deploy
+docker compose build
+docker compose up -d
+```
 
-## Optional: SSH deploy instead of Watchtower
+No `.env` file is required for Traefik routing; the host rule is fixed in `docker-compose.yml`.
 
-If you prefer CI to deploy via SSH instead of Watchtower, add a deploy job that SSHs and runs `docker compose pull && docker compose up -d` in `/opt/apps/portfolio`, and set secrets `SSH_PRIVATE_KEY`, `VPS_HOST`, `VPS_USER`. The current workflow is kept minimal (build + push only) to match the brief.
+---
+
+## What `docker-compose.yml` configures
+
+| Item | Value |
+|------|--------|
+| Service | `web` → image `portfolio-web:local` |
+| Traefik | Host rule for **horas-code.my.id** |
+| Entrypoint / TLS | `websecure`, `letsencrypt` |
+| App port | `3000` (Next.js standalone) |
+| Network | `proxy` (external) |
+
+---
+
+## Docker image (multi-stage)
+
+The repo root **`Dockerfile`** uses four stages: **base** → **deps** (`npm ci`) → **builder** (`next build`) → **runner** (`node server.js` standalone). **`next.config.js`** must keep **`output: 'standalone'`**.
+
+---
+
+## GitHub Actions
+
+The workflow **lints** and runs **`next build`** on push/PR to `main`. It does **not** push Docker images; the VPS builds from the cloned repo.
+
+---
+
+## Related files
+
+| File | Purpose |
+|------|--------|
+| `docker-compose.yml` | Traefik labels + local build |
+| `../Dockerfile` | Multi-stage production image |
+| `VPS_PRODUCTION_BRIEF.md` | Older playbook (different flow) |
+
+To use a **different hostname**, change the `traefik.http.routers.portfolio.rule` label in `docker-compose.yml`, update DNS, then run **`docker compose up -d`** again.
