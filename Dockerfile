@@ -23,9 +23,6 @@ ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 
 RUN npm run build
 
-# Next standalone expects ./public at runtime; COPY fails if the directory is missing from the repo
-RUN mkdir -p public
-
 # --- Stage 4: runtime (minimal) ---
 FROM base AS runner
 WORKDIR /app
@@ -36,7 +33,9 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs \
     && adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/public ./public
+# No app `public/` in repo; standalone still resolves static files from .next/static. Empty dir avoids runtime ENOENT.
+RUN mkdir -p public && chown nextjs:nodejs public
+
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
