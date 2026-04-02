@@ -1,5 +1,6 @@
 # --- Stage 1: base OS + libc for Alpine compatibility (e.g. sharp) ---
-FROM node:20-alpine AS base
+# Pin to current LTS; rebuild periodically so scanners pick up patched base layers
+FROM node:22-alpine AS base
 RUN apk add --no-cache libc6-compat
 
 # --- Stage 2: install npm dependencies (layer cached when lockfile unchanged) ---
@@ -15,6 +16,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Baked into the client/server bundle at build time; override when building for production
+ARG NEXT_PUBLIC_APP_URL=http://localhost:3000
+ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 
 RUN npm run build
 

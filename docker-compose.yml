@@ -1,9 +1,12 @@
 services:
   web:
     build:
-      context: ..
+      context: .
       dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_APP_URL: https://horas-code.my.id
     image: portfolio-web:local
+    pull_policy: build
     container_name: portfolio-web
     restart: unless-stopped
     networks:

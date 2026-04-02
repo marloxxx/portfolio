@@ -10,7 +10,8 @@ import { APP_URL } from '@/constants/others'
 import { colors } from '@/lib/theme'
 import LayoutProvider from '@/providers/layout-provider'
 import { getProjectDetails } from '@/utils/functions'
-import GoogleAnalytics from 'components/analytics/google-analytics'
+
+import GoogleAnalytics from '@/components/analytics/google-analytics'
 
 const outfit = Outfit({
   weight: ['400', '500', '600', '700'],
@@ -37,7 +38,8 @@ export async function generateMetadata(): Promise<Metadata> {
     }
   }
   const h = await headers()
-  const requestUrl = h.get('x-request-url') ?? APP_URL
+  const requestUrlHeader = h.get('x-request-url')?.trim()
+  const requestUrl = requestUrlHeader || APP_URL
   const pathname = new URL(requestUrl).pathname
 
   const title =

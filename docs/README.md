@@ -36,12 +36,11 @@ Run everything below **on the VPS** over SSH.
    cd portfolio
    ```
 
-   Layout must be: **`Dockerfile`** and **`package.json`** at the repo root, **`deploy/docker-compose.yml`** under **`deploy/`** (Compose `context: ..` builds from the root).
+   Layout must be: **`Dockerfile`**, **`package.json`**, and **`docker-compose.yml`** at the repo root.
 
 2. **Build the Docker image and start the stack**
 
    ```bash
-   cd deploy
    docker compose build
    docker compose up -d
    ```
@@ -66,7 +65,6 @@ On the VPS:
 ```bash
 cd /opt/apps/portfolio
 git pull
-cd deploy
 docker compose build
 docker compose up -d
 ```
@@ -103,8 +101,8 @@ The workflow **lints** and runs **`next build`** on push/PR to `main`. It does *
 
 | File | Purpose |
 |------|--------|
-| `docker-compose.yml` | Traefik labels + local build |
-| `../Dockerfile` | Multi-stage production image |
+| `docker-compose.yml` (repo root) | Traefik labels + local build |
+| `Dockerfile` (repo root) | Multi-stage production image |
 | `VPS_PRODUCTION_BRIEF.md` | Older playbook (different flow) |
 
 To use a **different hostname**, change the `traefik.http.routers.portfolio.rule` label in `docker-compose.yml`, update DNS, then run **`docker compose up -d`** again.

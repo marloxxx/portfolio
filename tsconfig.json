@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,52 +14,25 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "baseUrl": "./src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/animation/*": [
-        "animation/*"
-      ],
-      "@/companies/*": [
-        "assets/companies/*"
-      ],
-      "@/icons/*": [
-        "assets/icons/*"
-      ],
-      "@/projects/*": [
-        "assets/projects/*"
-      ],
-      "@/assets/*": [
-        "assets/*"
-      ],
-      "@/common/*": [
-        "components/common/*"
-      ],
-      "@/ui/*": [
-        "components/ui/*"
-      ],
-      "@/hooks/*": [
-        "hooks/*"
-      ],
-      "@/lib/*": [
-        "lib/*"
-      ],
-      "@/utils/*": [
-        "utils/*"
-      ],
-      "@/providers/*": [
-        "providers/*"
-      ],
-      "@/constants/*": [
-        "constants/*"
-      ]
+      "@/animation/*": ["./src/animation/*"],
+      "@/companies/*": ["./src/assets/companies/*"],
+      "@/icons/*": ["./src/assets/icons/*"],
+      "@/projects/*": ["./src/assets/projects/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/common/*": ["./src/components/common/*"],
+      "@/ui/*": ["./src/components/ui/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/providers/*": ["./src/providers/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -73,7 +42,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
