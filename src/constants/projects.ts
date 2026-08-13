@@ -48,7 +48,7 @@ export const MINOR_PROJECT_HEADER = {
 export const MAJOR_PROJECTS: TProject[] = [
   {
     id: 'esg-dashboard',
-    title: 'ESG Dashboard — Maturity Platform',
+    title: 'ESG Dashboard',
     image: ESG,
     color: '#059669',
     summary:
@@ -119,9 +119,9 @@ export const MAJOR_PROJECTS: TProject[] = [
   },
   {
     id: 'licentra',
-    title: 'Licentra — Software Inventory & Compliance',
+    title: 'Licentra',
     image: LICENTRA,
-    color: '#0F766E',
+    color: '#7C3AED',
     summary:
       'Licentra is an enterprise software inventory and compliance platform that gives IT teams full visibility into Windows endpoints across the organisation. Built as a pnpm/Turborepo monorepo, it combines a React dashboard, a NestJS API (tRPC + Prisma), a native Windows Go agent, and BullMQ background workers. The agent inventories installed applications (registry), running processes, and filesystem executables, then submits multi-megabyte audit payloads that the platform normalises into compliance scores, licence seat tracking, and actionable findings. Role- and unit-scoped access, registration-token onboarding, HMAC-signed device actions, AI-assisted rule candidates, malware-hash matching, and executive PDF/CSV/XLS reports make Licentra a complete single-tenant stack for corporate software governance—from USB-based mass install to fleet auto-update and SI Portal directory sync.',
     links: [],
