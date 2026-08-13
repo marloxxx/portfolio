@@ -13,7 +13,7 @@
 
 ## ⚡ Introduction
 
-A computer science undergrad's portfolio website showcasing accomplishments and project work across web development and related domains.
+Personal portfolio of Horas Marolop Amsal Siregar — software engineer & full stack developer — showcasing enterprise projects (ESG maturity, SSO, helpdesk, software inventory & compliance), experience, and contact.
 
 ## ⚙️ Tech Stack
 
@@ -68,5 +68,5 @@ _Add screenshots to a `readme_assets/` folder (e.g. Hero, Stacks, Projects) and 
 
 ## 👋 Contact
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/s4shibam)
-[![Twitter](https://img.shields.io/badge/Twitter-00ACEE?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/intent/follow?screen_name=s4shibam)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/horas-marolop-amsal-siregar/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/horasamsal)

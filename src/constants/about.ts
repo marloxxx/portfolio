@@ -12,9 +12,9 @@ export const ABOUT: TAbout[] = [
   {
     type: 'summary',
     description: [
-      "Backend-focused Fullstack Developer experienced in building secure and scalable enterprise web and mobile systems. Skilled in designing microservices-oriented architectures, RESTful APIs, and distributed authentication platforms using OAuth 2.0 and OpenID Connect.",
-      "Proven track record delivering 15+ production solutions including Enterprise Single Sign-On (SSO), AI-powered business systems, real-time helpdesk platforms, and fintech applications.",
-      "Specialized in Laravel, Flutter, and security-focused backend development with strong emphasis on system design, performance optimization, and clean architecture."
+      'Backend-focused Full Stack Developer building secure, scalable enterprise web, mobile, and endpoint systems. Experienced with distributed authentication (OAuth 2.0, OpenID Connect), queue-driven backends, and monorepo full-stack delivery.',
+      'Delivered production platforms including ESG Dashboard (ESG maturity & GHG reporting), Licentra (software inventory & compliance with a native Windows Go agent), SI Portal SSO (FusionAuth), real-time Helpdesk PTSI (web + mobile), and multiple fintech and business applications.',
+      'Core stack: TypeScript (NestJS, React, tRPC, Prisma), Laravel/PHP, Flutter, Golang, PostgreSQL/MySQL, Redis/BullMQ, and Docker—with strong focus on system design, security, and clean architecture.',
     ]
   },
   {
